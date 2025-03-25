@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <title>Web Project Plan</title>
+  <style>
+    body {
+      font-family: "Audiowide", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #01031f;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #fff;
+    }
+
+    #container {
+      background-color: #01031f;
+      padding: 10px;
+      border-bottom: 3px solid #c19100;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .icona {
+      width: 100%;
+      height: auto;
+      max-height: 450px;
+      object-fit: contain;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #c19100;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    nav a,
+    .finestra {
+      color: #01031f;
+      padding: 10px 20px;
+      text-decoration: none;
+      background-color: #c19100;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover,
+    .finestra:hover {
+      background-color: #970000;
+      color: #fff;
+      padding: 30px;
+    }
+
+    .finestra {
+      position: relative;
+      display: inline-block;
+    }
+
+    .finestrafine {
+      display: none;
+      position: absolute;
+      background-color: #01031f;
+      min-width: 160px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .finestrafine a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .finestrafine a:hover {
+      background-color: #970000;
+      padding: 10px;
+    }
+
+    .finestra:hover .finestrafine {
+      display: block;
+    }
+
+    #autori {
+      background-color: #c19100;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      color: #01031f;
+      font-weight: bold;
+      font-size: 14px;
+      font-family: "Audiowide", sans-serif;
+    }
+
+    #autori:hover {
+      background-color: #970000;
+      color: #01031f;
+    }
+
+    footer {
+  background-color: #1d1d1d; 
+  color: white;
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+    .footer-TUTTO {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #1d1d1d; 
+}
+
+.UNO, .DUE {
+  margin-bottom: 10px;
+  background-color: #1d1d1d; 
+}
+
+.footer-LINKS {
+  color: yellow; 
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+
+.footer-LINKS,a{
+      text-decoration:none;
+}
+.footer-link:hover{
+    padding:10px;
+  background-color: rgba(60, 60,80, 0.7) ; 
+    border: 1px solid;
+    border-radius: 10px;
+}
+.cercasito input {
+  padding: 2px 10px;
+  font-size: 16px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+}
+
+
+    h1,
+    h2 {
+      color: #c19100;
+    }
+
+    p {
+      color: #fff;
+      line-height: 1.6;
+      padding: 10px;
+      background-color: #01031f;
+    }
+
+    .indice ol {
+      width: 300px;
+      color: #c19100;
+      font-size: 20px;
+      padding: 20px;
+      background-color: #01031f;
+      border: 2px solid #c19100;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .indice a {
+      color: #c19100;
+      text-decoration: none;
+    }
+
+    .indice a:hover {
+      color: #970000;
+      text-decoration: underline;
+    }
+
+    img {
+      width: 90%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto;
+      border: 2px solid #c19100;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="container">
+      <img src="icona.jpg" alt="Icona Rat-Man" class="icona">
+    </div>
+  </header>
+
+  <nav>
+    <a href="home.html">HOME</a>
+    <a href="catalogo.html">CATALOGO</a>
+    <a href="login.html">LOGIN</a>
+    <div class="finestra">
+      <button id="autori">AUTORI</button>
+      <div class="finestrafine">
+        <a href="autori.html">Creatore</a>
+        <a href="illustratore.html">Illustratore</a>
+        <a href="editore.html">Editore</a>
+      </div>
+    </div>
+  </nav>
+
+  <div id="web-project-plan">
+    <h1><strong>Web Project Plan</strong></h1>
+
+    <div class="indice">
+      <ol>
+        <li><a href="#idea"><strong>Idea</strong></a></li>
+        <li><a href="#brief"><strong>Brief</strong></a></li>
+        <li><a href="#benchmark"><strong>Benchmark</strong></a></li>
+        <li><a href="#struttura"><strong>Struttura</strong></a></li>
+        <li><a href="#layout"><strong>Layout</strong></a></li>
+        <li><a href="#usabilita"><strong>Usabilità</strong></a></li>
+        <li><a href="#servizi"><strong>Servizi</strong></a></li>
+        <li><a href="#biografia"><strong>Biografia/Sitografia</strong></a></li>
+      </ol>
+    </div>
+
+    <section id="idea">
+      <h2>Idea</h2>
+      <p>L’idea alla base di questo sito web nasce dalla passione per i fumetti di Leo Ortolani, in
+particolare per le sue parodie dei film cult della storia del cinema. L’obiettivo è raccogliere
+queste opere in un’unica piattaforma, dove gli utenti possano trovarle facilmente, selezionarle
+e recensirle attraverso un sistema di valutazione a 5 stelle.
+Il sito web da un benvenuto con una grande icona rappresentante il fumetto e toni accesi per
+dare all’utente un senso di divertimento lì dentro , inoltre all’utente é subito chiaro le attività
+che si possono svolgere all’interno del sito.
+Tale sito web include un homepage con i vari nav bar che guidano a pagine secondarie per
+ottenere informazioni sui fumetti selezionati come: gli autori e la trama .
+Per la creazione della piattaforma sono stati utilizzati Pinterest,Wikipedia(…) e L’IDE che è
+stato utilizzato é sublime text .
+</p>
+    </section>
+
+    <section id="brief">
+      <h2>Brief</h2>
+      <p>Finalità e obiettivi del progetto
+Rat-Parodie consente agli utenti di raccogliere tutte le parodie dei film realizzate da Leo
+Ortolani in un’unica piattaforma online. Ogni parodia, presentata come albo speciale con
+titoli che richiamano il film parodiato, non è stata raccolta in una serie unica dall’autore.
+Questo sito rappresenta, quindi, l’unico punto d’incontro dove è possibile individuare e
+consultare esclusivamente queste opere, facilitando la lettura per gli appassionati.
+Pubblico di riferimento
+Il sito non è destinato a una categoria specifica, ma è pensato per essere accessibile a tutti.
+Dalle famiglie e ai più piccoli, che possono ammirare i magnifici disegni di Leo Ortolani, ai
+ragazzini che si avvicinano per la prima volta a Rat Man, fino agli adulti che sono cresciuti
+con queste opere. Rat-Parodie è stato progettato per offrire un’esperienza intuitiva e semplice,
+aperta alla conoscenza e alla passione di un pubblico variegato.
+Accesso alla risorsa
+￼ 1
+L’accesso alla piattaforma é progettato per poter essere eseguito in vari dispositivi. Grazie a
+un’interfaccia user-friendly, il sito si adatta perfettamente sia ai dispositivi mobili che ai
+desktop, garantendo un’esperienza accessibile e intuitiva per tutti gli utenti.
+Contenuti
+Tutti i contenuti multimediali presenti sulla piattaforma, come immagini e testi, offrono agli
+utenti un’esperienza coinvolgente, esaltando i colori e lo stile distintivo dei disegni di Leo
+Ortolani. L’obiettivo è far immergere l’utente nel mondo di Rat Man attraverso un design
+accattivante e tematico. Lo stile utilizzato richiama l’universo del fumetto, completato da font
+animati che conferiscono dinamicità e modernità alla presentazione.
+</p>
+    </section>
+
+    <section id="benchmark">
+  <h2>Benchmark</h2>
+
+  <h3>3.1 Analisi di mercato</h3>
+  <p>Non esistono siti che offrono un catalogo completo delle parodie di Rat-Man di Leo Ortolani, consentendo un filtro avanzato per autori, personaggi o tematiche trattate. Inoltre, nessuna piattaforma mette in evidenza i luoghi dove si svolgono le storie, un aspetto significativo nell'evoluzione del personaggio. Il nostro sito, invece, fornirà la possibilità di leggere le parodie per un'analisi approfondita dei fumetti, consentendo di esplorare ogni numero e osservare come il personaggio evolve nel corso degli anni. Molti siti propongono cataloghi ma senza la possibilità di leggere o analizzare i vari fumetti nel dettaglio.</p>
+
+  <p>Alcuni dei principali concorrenti sono:</p>
+  <ul>
+    <li><a href="https://www.rat-man.org/" >Rat-Man Official</a></li>
+    <li><a href="https://www.leoortolani.it" >Leo Ortolani Official</a></li>
+    <li><a href="https://www.youtube.com/results?search_query=tintoria+leo+ortolani" >Podcast Tintoria: Intervista a Leo Ortolani</a></li>
+  </ul>
+
+  <h3>3.2 Descrizione dei concorrenti</h3>
+  
+  <p><strong>1. <a href="https://www.rat-man.org/">Rat-Man Official</a></strong></p>
+  <p>Il sito ufficiale di Rat-Man presenta una serie di contenuti riguardanti le parodie, incluse alcune informazioni sulle uscite e sull'evoluzione del personaggio. Tuttavia, non offre una visualizzazione completa dei fumetti né la possibilità di leggere le parodie online. La navigazione è semplice e diretta, ma il sito manca di funzionalità avanzate come filtri di ricerca per autore o tema. La sezione catalogo è limitata e non offre una gestione interattiva dei contenuti, il che rende difficile per l'utente esplorare a fondo i vari numeri e parodie del personaggio.</p>
+
+  <p><strong>2. <a href="https://www.leoortolani.it" target="_blank">Leo Ortolani Official</a></strong></p>
+  <p>Il sito ufficiale di Leo Ortolani è dedicato alla sua carriera e ai suoi lavori, ma non offre una piattaforma interattiva specificamente focalizzata su Rat-Man. La navigazione è focalizzata principalmente sulla presentazione dell'autore e dei suoi fumetti in generale, senza un catalogo interattivo delle parodie di Rat-Man. Non ci sono funzionalità avanzate di ricerca o filtri, e la possibilità di esplorare i fumetti online è limitata. Il sito si concentra più sulla promozione dell'autore che sulla creazione di un'esperienza utente immersiva per gli appassionati di Rat-Man.</p>
+  
+  <p><strong>3. <a href="https://www.youtube.com/results?search_query=tintoria+leo+ortolani" >Podcast Tintoria: Intervista a Leo Ortolani</a></strong></p>
+  <p>In questa intervista al podcast Tintoria, Leo Ortolani discute del suo percorso artistico e della creazione del personaggio di Rat-Man. È una risorsa utile per chi vuole approfondire la storia di Ortolani e la sua visione creativa. Sebbene non offra un catalogo dei fumetti, il podcast fornisce un'interessante prospettiva sull'evoluzione del personaggio e sul lavoro dell'autore. È un ottimo punto di partenza per chi cerca di capire meglio l'autore e la sua opera.</p>
+
+  <p>Il nostro progetto su Rat-Man si concentrerà sulla creazione di un catalogo completo delle parodie di Leo Ortolani, con un sistema di ricerca avanzato che permetterà di filtrare per autore, personaggio, tema e numero. Il sito offrirà la possibilità di leggere ogni parodia direttamente online, con un'esperienza interattiva e user-friendly. La piattaforma sarà completamente responsiva, assicurando un'esperienza ottimale su dispositivi desktop e mobili. Inoltre, verranno implementati filtri dinamici e una navigazione intuitiva, migliorando l'interazione dell'utente con il contenuto.</p>
+</section>
+
+
+    <section id="struttura">
+      <h2>Struttura</h2>
+      <p>Idea
+Esiste già un sito ufficiale che raccoglie tutte le opere di Rat-Man, ma l’idea di creare una
+piattaforma dedicata esclusivamente a una specifica categoria delle opere di Leo Ortolani
+rappresenta un valore aggiunto per gli appassionati del fumetto. Questa piattaforma non solo
+offrirebbe un’esperienza focalizzata e tematica, ma permetterebbe anche agli utenti di
+interagire tra loro e di recensire i fumetti, contribuendo così a diffondere e valorizzare
+ulteriormente questi capolavori.
+</p>
+      <img src="mappa.jpg" alt="Mappa del sito">
+      <img src="schema.jpg" alt="Schema delle dipendenze">
+    </section>
+
+    <section id="layout">
+      <h2>Layout</h2>
+      <p>Ogni sezione è disegnata seguendo un wireframe con elementi principali ben evidenziati, mantenendo coerenza tra le pagine e uno stile dark/gold.</p>
+      <img src="wrHome.jpeg" alt="Wireframe Home">
+      <img src="WRCatalogo.jpg" alt="Wireframe Catalogo">
+      <img src="wrLogin.jpg" alt="Wireframe Login">
+      <img src="wrEditore.jpg" alt="Wireframe Editore">
+      <img src="wrCreatore.jpg" alt="Wireframe Creatore">
+      <img src="wrIllustratore.jpg" alt="Wireframe Illustratore">
+    </section>
+
+    <section id="usabilita">
+  <h2>Usabilità</h2>
+  <p><strong>Norme di usabilità per l'architettura</strong></p>
+  <p>Dal punto di vista dell'architettura, la navbar, che funge da navigazione principale, rimane sempre visibile nella parte superiore della pagina grazie alla sua caratteristica "sticky". In questo modo, mentre l'utente scorre la pagina, la navbar rimane ancorata alla parte superiore della finestra, rendendo sempre accessibile la navigazione. La pagina che si sta esplorando è sempre evidenziata per garantire un'orientamento chiaro. Inoltre, se si clicca sul logo o sull'immagine della testata, si ritorna alla homepage.</p>
+
+  <p>Ogni pagina, ad eccezione della home, include le <strong>breadcrumbs</strong> navigabili, che permettono all'utente di tornare facilmente alle pagine precedenti o alla home. Le breadcrumbs non sono solo utili per la navigazione, ma servono anche come strumento di orientamento per migliorare l'esperienza utente.</p>
+
+  <p>Il footer è presente in tutte le pagine e contiene gli stessi contenuti e lo stesso aspetto, assicurando coerenza e uniformità in tutto il sito.</p>
+
+  <p>Tutte le pagine sono strutturate in sezioni specifiche per contenuti ben definiti. Ad esempio, nella pagina <strong>Catalogo</strong>, sono presenti due sezioni principali: una dedicata ai filtri di browsing e l'altra alla visualizzazione dei fumetti. Un'organizzazione simile è ripresa in altre pagine di raccolta, creando un ambiente familiare e facilmente navigabile per l'utente.</p>
+
+  <p>Le pagine <strong>item</strong> sono organizzate con una sezione principale per la visualizzazione del fumetto. Ogni metadato, come il disegnatore o l'autore, è cliccabile e rimanda alla pagina relativa.</p>
+
+  <p>Il sito è completamente responsivo, permettendo una visualizzazione ottimale sia su desktop che su dispositivi mobili. La struttura delle pagine è divisa in blocchi chiari, che si adattano automaticamente alle dimensioni dello schermo, per offrire un'esperienza utente fluida e leggibile su qualsiasi dispositivo. Inoltre, vari bottoni e link consentono di accedere facilmente a pagine specifiche, come item, catalogo o altre aree del sito.</p>
+
+  <p><strong>Nota sulle recensioni:</strong> Per le recensioni, sono stati utilizzati dei cuori stilizzati per permettere agli utenti di valutare i fumetti. Questi cuori sono resi interattivi per facilitare l'interazione e fornire un feedback visibile e immediato.</p>
+</section>
+
+
+    <section id="servizi">
+      <h2>Servizi</h2>
+      <p>Il sito offre una funzione di ricerca, la possibilità di consultare il catalogo delle parodie e accedere a una sezione autori dettagliata. In futuro si potranno inserire commenti o recensioni.</p>
+    </section>
+
+    <section id="biografia">
+  <h2>Biografia/Sitografia</h2>
+  <p>Fonti utilizzate:youtube, Wikipedia, sito ufficiale di Rat-Man, Pinterest e procreate per grafiche, Sublime Text per la programmazione, HTML e CSS per lo sviluppo frontend, e i vari siti qui sotto elencati:</p>
+  <ul>
+    <li><a class="footer-LINKS" href="https://www.rat-man.org/" >Sito Ufficiale di Rat-Man</a></li>
+    <li><a class="footer-LINKS" href="https://www.wikipedia.org/">Wikipedia</a> - 
+      <a class="footer-LINKS" href="https://it.wikipedia.org/wiki/Rat-Man">Pagina Rat-Man</a></li>
+    <li><a class="footer-LINKS" href="https://www.panini.it/">Sito Ufficiale Panini Comics</a></li>
+    <li><a class="footer-LINKS" href="https://app.diagrams.net/" >draw.io (per la creazione di schemi e mappe)</a></li>
+    <li><a class="footer-LINKS" href="https://procreate.com/" >Procreate (per la realizzazione grafica)</a></li>
+    <li><a class="footer-LINKS" href="https://www.pinterest.it/" >Pinterest (riferimenti grafici e ispirazioni)</a></li>
+    <li><a class="footer-LINKS" href="https://www.sublimetext.com/">Sublime Text (per la scrittura del codice)</a></li>
+    <li><a class="footer-LINKS" href="https://www.youtube.com/results?search_query=tintoria+leo+ortolani">Podcast "Tintoria" intervista a Leo Ortolani </a></li>
+  </ul>
+</section>
+  </div>
+
+  <footer>
+  <div class="footer-TUTTO">
+    <p class="UNO">
+      Tutti i diritti sui contenuti di questo sito (nomi, immagini, testi ed altro) sono di proprietà dei rispettivi autori e/o case editrici, sotto la tutela delle leggi internazionali sul copyright/trademark.
+    </p>
+    <p class="DUE">
+      Questo progetto è totalmente privo di scopi di lucro da parte dell'autore. Lo scopo è puramente amatoriale e perciò non è assolutamente affiliato o dipendente da alcun editore.
+    </p>
+    <div class="footer-LINKS">
+      <a href="#credits" class="footer-link">Credits</a>
+      <a href="web-project-plan.html" class="footer-link">Web Project Plan</a>
+      <a href="#info" class="footer-link">Informazioni</a>
+    </div>
+    <div class="cercasito">
+      <input type="text" placeholder="Cerca nel sito" id="search">
+    </div>
+  </div>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Raccolata fumetti RatMan</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <style type="text/css">
+        /* --- START UGUALE --- */
+        body {
+            font-family: "Audiowide", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #01031f;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        #container {
+            background-color: #01031f;
+            padding: 10px;
+            border-bottom: 3px solid #c19100;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .icona {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: contain;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            background-color: #c19100;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        nav a,
+        .finestra {
+            color: #01031f;
+            padding: 10px 20px;
+            text-decoration: none;
+            background-color: #c19100;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            margin: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover,
+        .finestra:hover {
+            background-color: #970000;
+            color: #fff;
+            padding: 30px;
+        }
+
+        .finestra {
+            position: relative;
+            display: inline-block;
+        }
+
+        .finestrafine {
+            display: none;
+            position: absolute;
+            background-color: #01031f;
+            min-width: 160px;
+            border-radius: 8px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .finestrafine a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        .finestrafine a:hover {
+            background-color: #970000;
+            padding: 10px;
+        }
+
+        .finestra:hover .finestrafine {
+            display: block;
+        }
+        /* --- FINE UGUALE --- */
+
+        #Login {
+            display: flex;
+            justify-content: center;
+            gap: 100px;
+            margin: 10vh auto;
+            padding: 10vh;
+            color: #01031f;
+             border: 10px solid #970000;
+            border-radius: 30px;
+            font-size: 18px;
+            background-color: #c19100;
+            width: 580px;
+            text-align: center;
+        }
+
+        #login {
+            margin-left: 50px;
+        }
+
+         #reg{
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 10px;
+    background-color:rgba(60, 60, 80, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+#accedi{
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 10px;
+    background-color:rgba(60, 60, 80, 0.7);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+        #invia {
+            font-family: "Audiowide", sans-serif;
+            font-weight: bold;
+            color: #01031f;
+            background-color: #c19100;
+            padding: 12px 30px;
+            border: 2px solid;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s red;
+            margin: 10px;
+            width: 230px;
+        }
+
+        #invia:hover {
+            background-color: #970000;
+        }
+
+        #autori {
+            font-family: "Audiowide", sans-serif;
+            font-weight: bold;
+            color: #01031f;
+            background-color: #c19100;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        #autori:hover {
+            background-color: #970000;
+            color: white;
+        }
+
+        img {
+            width: 100%;
+            max-width: 1530px;
+            gap: 10px;
+        }
+
+        .immagini {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px 4px;
+            margin: 10px;
+        }
+
+        .item {
+            background-color: #01031f;
+            color: #c19100;
+            padding: 10px;
+        }
+
+        #info {
+            font-size: 14px;
+        }
+        input{
+    border: 2px solid ;
+    border-radius: 10px;
+    width: 200px;
+    height:20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+           
+}
+
+        /* CSS FOOTER: START */
+        footer {
+            background-color: #1d1d1d;
+            color: white;
+            padding: 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .footer-TUTTO {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .UNO, .DUE {
+            margin-bottom: 10px;
+        }
+
+        .footer-LINKS {
+            color: yellow; 
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .footer-LINKS, .footer-link {
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            padding: 10px;
+            background-color: rgba(60, 60, 80, 0.7);
+            border: 1px solid;
+            border-radius: 10px;
+        }
+
+        .cercasito input {
+            padding: 2px 10px;
+            font-size: 16px;
+            width: 200px;
+            border: none;
+            border-radius: 5px;
+        }
+        /* CSS FOOTER: FINE */
+    </style>
+</head>
+<body>
+    <header>
+        <div id="container">
+            <img src="icona.jpg" alt="Icona Rat-Man" class="icona">
+        </div>
+    </header>
+
+    <nav>
+        <a href="home.html">HOME</a>
+        <a href="catalogo.html">CATALOGO</a>
+        <a href="login.html">LOGIN</a>
+        <div class="finestra">
+            <button id="autori" type="button">AUTORI</button>
+            <div class="finestrafine">
+                <a href="autori.html">Creatore</a>
+                <a href="illustratore.html">Illustratore</a>
+                <a href="editore.html">Editore</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- INIZIO PATH LOGIN-->
+    <div id="Login">
+        <div id="login">
+            <p id="accedi">ACCEDI</p><br>
+            <p>Indirizzo e-mail</p><br>
+            <input type="email" name="barra e-mail"><br>
+            <p>Password</p><br>
+            <input type="password" name="barra e-mail"><br>
+        </div>
+
+        <div id="registrati">
+            <p id="reg">REGISTRATI</p><br>
+            <p>Nome</p><br>
+            <input type="text" name="nome"><br>
+            <p>Cognome</p><br>
+            <input type="text" name="cognome"><br>
+            <p>Data di nascita</p><br>
+            <input type="date" name="data"><br>
+            <p>Indirizzo e-mail</p><br>
+            <input type="email" name="barra e-mail"><br>
+            <p>Nuova password</p><br>
+            <input type="password" name="password"><br>
+            <p>Conferma password</p><br>
+            <input type="password" name="conferma"><br>
+            <button id="invia">INVIA!</button>
+        </div>
+    </div>
+    <!-- FINE PATH LOGIN -->
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-TUTTO">
+            <p class="UNO">
+                Tutti i diritti sui contenuti di questo sito (nomi, immagini, testi ed altro) sono di proprietà dei rispettivi autori e/o case editrici, sotto la tutela delle leggi internazionali sul copyright/trademark.
+            </p>
+            <p class="DUE">
+                Questo progetto è totalmente privo di scopi di lucro da parte dell'autore. Lo scopo è puramente amatoriale e perciò non è assolutamente affiliato o dipendente da alcun editore.
+            </p>
+            <div class="footer-LINKS">
+                <a href="#credits" class="footer-link">Credits</a>
+                <a href="web-project-plan.html" class="footer-link">Web Project Plan</a>
+                <a href="#info" class="footer-link">Informazioni</a>
+            </div>
+            <div class="cercasito">
+                <input type="text" placeholder="Cerca nel sito" id="search">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

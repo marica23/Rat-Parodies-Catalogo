@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+  <title>Home</title>
+  <style>
+    body {
+      font-family: "Audiowide", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #01031f;
+      color: #fff;
+    }
+
+    #container {
+      background-color: #01031f;
+      padding: 10px;
+      border-bottom: 3px solid #c19100;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .icona {
+      width: 100%;
+      max-height: 450px;
+      object-fit: contain;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #c19100;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    nav a, .finestra {
+      color: #01031f;
+      padding: 10px 20px;
+      text-decoration: none;
+      background-color: #c19100;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover, .finestra:hover {
+      background-color: #970000;
+      color: #fff;
+      padding: 30px;
+    }
+
+    .finestra {
+      position: relative;
+      display: inline-block;
+    }
+
+    .finestrafine {
+      display: none;
+      position: absolute;
+      background-color: #01031f;
+      min-width: 160px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .finestrafine a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .finestrafine a:hover {
+      background-color: #970000;
+    }
+
+    .finestra:hover .finestrafine {
+      display: block;
+    }
+
+    #autori {
+      background-color: #c19100;
+      color: #01031f;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      font-family: "Audiowide", sans-serif;
+      transition: background-color 0.3s;
+    }
+
+    #autori:hover {
+      background-color: #970000;
+      color: #01031f;
+    }
+   
+       #Megazzi{
+      width: 400px;
+      height: 450px;
+      object-fit: cover;
+     border: 2px solid #c19100;
+      box-shadow: 0 0 6px #c19100;
+      transition: transform 0.4s;
+      border-left: 5px solid #c19100      
+    
+    }
+
+    h1 {
+      color: #c19100;
+      text-align: center;
+      font-size: 45px;
+      margin: 30px 20px;
+      text-shadow: 2px 2px #000;
+    }
+
+    .info-box, .project-info {
+      background-color: #c19100;
+      color: #01031f;
+      border-radius: 15px;
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+      text-align: center;
+    }
+
+    .info-box h2, .project-info h2 {
+      color: #01031f;
+      margin-bottom: 10px;
+    }
+
+    .info-box span {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .item {
+      max-width: 900px;
+      margin: 30px auto;
+      text-align: center;
+    }
+
+    .item img {
+      width: 100%;
+      max-width: 800px; /* Limita la larghezza dell'immagine */
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+      margin-bottom: 20px;
+    }
+
+    .cuoricini-container {
+      margin: 15px 0;
+      color: #970000;
+      font-size: 24px;
+    }
+
+    .botton {
+      background-color: #c19100;
+      color: #01031f;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 12px;
+      border: 2px solid #01031f;
+      cursor: pointer;
+      transition: background-color 0.3s, color 0.3s;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+      text-decoration: none;
+    }
+
+    .botton:hover {
+      background-color: #970000;
+      color: #fff;
+    }
+
+    footer {
+      background-color: #1d1d1d;
+      color: white;
+      padding: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .footer-TUTTO {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .footer-LINKS a {
+      color: blue;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .footer-LINKS a:hover {
+      background-color: rgba(60, 60, 80, 0.7);
+      padding: 10px;
+      border-radius: 10px;
+    }
+
+    .cercasito input {
+      padding: 2px 10px;
+      font-size: 16px;
+      width: 200px;
+      border: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="container">
+      <img src="icona.jpg" alt="Icona Rat-Man" class="icona">
+    </div>
+    <nav>
+      <a href="home.html">HOME</a>
+      <a href="catalogo.html">CATALOGO</a>
+      <a href="login.html">LOGIN</a>
+      <div class="finestra">
+        <button id="autori">AUTORI</button>
+        <div class="finestrafine">
+          <a href="autori.html">Creatore</a>
+          <a href="illustratore.html">Illustratore</a>
+          <a href="editore.html">Editore</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <h1>Benvenuti nel mondo delle Parodie di Rat-Man!</h1>
+  <div class="item">
+    <img src="Magazzi.jpg" alt="Immagine Magazzi" id="Megazzi">
+    <div class="info-box">
+      <h2>Descrizione</h2>
+      <p>Venghino, siòri e siòre, perché qui si raccontano le strafavolose avventure del Grande Oler Magazzi...</p>
+    </div>
+  </div>
+
+  <!-- Aggiunta della sezione narrativa sul Progetto -->
+  <div class="project-info">
+    <h2>Trama</h2>
+    <p>
+      Oler Magazzi, Bastondoro e Nome e Cognome sono tre aspiranti maghi della scuola di magia. Per riuscire a guadagnare credito e diventare dei veri maghi, si intrufolano nelle segrete della scuola per svelarne i segreti. Inavvertitamente, però, risvegliano Valdifass, potente stregone del male che fu rinchiuso in un sepolcro con l'assistente Dolores al termine dell'ultima guerra contro i maghi della scuola, il quale giura vendetta. Per poterlo fermare, i tre devono cercare la Donna Filosofale, l'unica in grado di fermare il potere di Valdifass. Dopo alcuni tentativi di seduzione da parte di Oler, il quale deve battere anche la concorrenza di aspiranti conquistatori vampiri e licantropi, il trio riesce a convincere la ragazza a seguirli. La portano così al cospetto di Valdifass, che nel frattempo era riuscito a radunare il suo esercito di mostri ed entrare nella scuola di magia. L'intervento della Donna Filosofale sembra risolutivo, ma alla fine viene interrotta e solo gli incantesimi di Oler e dei suoi due compagni riescono a sconfiggere Valdifass e a farlo ritirare nuovamente nel suo sepolcro. Oler, Bastondoro e Nome acquisiscono così il diritto a diventare dei veri maghi.
+    </p>
+
+    <h2>Personaggi</h2>
+    <p>
+      Il nome di Oler Magazzi è stato scelto con difficoltà: dopo un primo tentativo di storpiare il nome del protagonista della saga omonima (come fu fatto facilmente con Star Rats da Star Wars), ad esempio con Ratty Potter o Harry Ratter, Ortolani scelse la via di un nome che non aveva niente a che vedere con l'originale: prima Moiro il Mago e poi, definitivamente, Oler Magazzi. Anche altri nomi sono stati cambiati durante la realizzazione: Bastondoro inizialmente avrebbe dovuto chiamarsi Biabiebabebieibabebìbieobabebibòbieububabebibobù, mentre il nome di Sbuffanoia doveva essere Lente.
+      Il cast di protagonisti vede anche la presenza di due personaggi di Venerdì 12, altra serie ortolaniana, ovvero Aldo e Giuda nei panni di Carlèn e Dolores. Nelle intenzioni dell'autore Carlèn avrebbe dovuto recuperare «le sette parti della sua anima, nascoste all'interno di sette ignoranti» per riacquistare la sua potenza, ma questa opzione venne scartata per la sua complicatezza.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer-TUTTO">
+      <p class="UNO">
+        Tutti i diritti sui contenuti di questo sito (nomi, immagini, testi ed altro) sono di proprietà dei rispettivi autori e/o case editrici, sotto la tutela delle leggi internazionali sul copyright/trademark.
+      </p>
+      <p class="DUE">
+        Questo progetto è totalmente privo di scopi di lucro da parte dell'autore. Lo scopo è puramente amatoriale e perciò non è assolutamente affiliato o dipendente da alcun editore.
+      </p>
+      <div class="footer-LINKS">
+        <a href="#credits" class="footer-link">Credits</a>
+        <a href="web-project-plan.html" class="footer-link">Web Project Plan</a>
+        <a href="#info" class="footer-link">Informazioni</a>
+      </div>
+      <div class="cercasito">
+        <input type="text" placeholder="Cerca nel sito" id="search">
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

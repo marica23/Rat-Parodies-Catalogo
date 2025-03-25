@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Autori</title>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Audiowide", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #01031f;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    #container {
+      background-color: #01031f;
+      padding: 10px;
+      border-bottom: 3px solid #c19100;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .icona {
+      width: 100%;
+      height: auto;
+      max-height: 450px;
+      object-fit: contain;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      background-color: #c19100;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    nav a,
+    .finestra {
+      color: #01031f;
+      padding: 10px 20px;
+      text-decoration: none;
+      background-color: #c19100;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      margin: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      transition: background-color 0.3s;
+    }
+
+    nav a:hover,
+    .finestra:hover {
+      background-color: #970000;
+      color: #fff;
+      padding: 30px;
+    }
+
+    .finestra {
+      position: relative;
+      display: inline-block;
+    }
+
+    .finestrafine {
+      display: none;
+      position: absolute;
+      background-color: #01031f;
+      min-width: 160px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .finestrafine a {
+      color: #fff;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .finestrafine a:hover {
+      background-color: #970000;
+      padding: 10px;
+    }
+
+    .finestra:hover .finestrafine {
+      display: block;
+    }
+
+    .bottone {
+      background-color: #c19100;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      color: #01031f;
+      font-weight: bold;
+      font-size: 14px;
+      font-family: "Audiowide", sans-serif;
+    }
+
+    .bottone:hover {
+      background-color: #970000;
+      color: white;
+    }
+
+    h2 {
+      color: #c19100;
+      width: 300px;
+      padding: 10px;
+      text-align: center;
+      font-size: 35px;
+      margin: 10px;
+    }
+
+    #tuttoleo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 20px;
+      padding: 20px;
+      background-color: #12122b;
+      border-radius: 20px;
+      /* Rimossa la luce gialla */
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+      gap: 30px;
+    }
+
+    #leo {
+      width: 300px;
+      height: 300px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid #c19100;
+      box-shadow: 0 0 8px #c19100;
+      transition: transform 0.4s ease;
+      border-left: 8px solid #c19100;
+    }
+
+    #leo:hover {
+      transform: scale(1.05);
+    }
+
+    .carta {
+      max-width: 600px;
+      background-color: #1c1c3a;
+      padding: 30px;
+      border-radius: 20px;
+      color: white;
+      line-height: 1.7;
+      font-size: 16px;
+      text-align: justify;
+      border-left: 8px solid #c19100;
+      transition: transform 0.4s ease;
+    }
+
+    .carta:hover {
+      transform: translateY(-10px);
+    }
+
+    .carta h2 {
+      color: #c19100;
+      font-size: 40px;
+      margin-bottom: 20px;
+      text-align: center;
+      text-shadow: 2px 2px #970000;
+    }
+
+    /* FOOTER */
+     footer {
+  background-color: #1d1d1d; 
+  color: white;
+  padding: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer-TUTTO {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.UNO, .DUE {
+  margin-bottom: 10px;
+}
+
+.footer-LINKS {
+  color: yellow; 
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+
+.footer-LINKS,a{
+      text-decoration:none;
+}
+.footer-link:hover{
+    padding:10px;
+  background-color: rgba(60, 60,80, 0.7) ; 
+    border: 1px solid;
+    border-radius: 10px;
+}
+.cercasito input {
+  padding: 2px 10px;
+  font-size: 16px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="container">
+    <img src="icona.jpg" alt="Icona Rat-Man" class="icona">
+  </header>
+  
+    <nav>
+      <a href="home.html">HOME</a>
+      <a href="catalogo.html">CATALOGO</a>
+      <a href="login.html">LOGIN</a>
+      <div class="finestra">
+        <button class="bottone">AUTORI</button>
+        <div class="finestrafine">
+          <a href="autori.html">Creatore</a>
+          <a href="illustratore.html">Illustratore</a>
+          <a href="editore.html">Editore</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- SEZIONE AUTORE -->
+  <div id="tuttoleo">
+    <img src="leo.jpg" id="leo" alt="Leo Ortolani">
+    <div class="carta">
+      <h2>Leo Ortolani</h2>
+      <p>Leo Ortolani è uno dei più importanti fumettisti italiani, noto per la serie <strong>Rat-Man</strong> che con il suo umorismo tagliente e le sue parodie geniali ha conquistato lettori di ogni età.</p>
+      <p>Nato a Pisa nel 1967, vive a Parma dal 1968 insieme alla moglie e alle figlie adottive. Cresciuto con la passione per i supereroi Marvel, come i Fantastici Quattro, Leo si ispira a quel mondo per creare il suo stile unico.</p>
+      <p>Amante del cinema d’azione e fan sfegatato di <strong>Sylvester Stallone</strong>, Ortolani trasforma la sua passione per il grande schermo in esilaranti parodie delle saghe più celebri, rendendo Rat-Man un’icona del fumetto italiano.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-TUTTO">
+      <p class="UNO">
+        Tutti i diritti sui contenuti di questo sito (nomi, immagini, testi ed altro) sono di proprietà dei rispettivi autori e/o case editrici, sotto la tutela delle leggi internazionali sul copyright/trademark.
+      </p>
+      <p class="DUE">
+        Questo progetto è totalmente privo di scopi di lucro da parte dell'autore. Lo scopo è puramente amatoriale e perciò non è assolutamente affiliato o dipendente da alcun editore.
+      </p>
+      <div class="footer-LINKS">
+        <a href="#credits" class="footer-link">Credits</a>
+        <a href="web-project-plan" class="footer-link">Web Project Plan</a>
+        <a href="#info" class="footer-link">Informazioni</a>
+      </div>
+      <div class="cercasito">
+        <input type="text" placeholder="Cerca nel sito">
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
